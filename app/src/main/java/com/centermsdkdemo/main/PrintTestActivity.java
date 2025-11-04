@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.centermsdkdemo.R;
 import com.pos.sdk.DeviceManager;
 import com.pos.sdk.DevicesFactory;
@@ -106,7 +105,6 @@ public class PrintTestActivity extends Activity {
         }
 
         try {
-            // Clear any previous print tasks
             printerDevice.clearBufferArea();
 
             // Set printer gray level for darker printing

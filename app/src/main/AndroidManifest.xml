@@ -29,7 +29,6 @@
         <activity
             android:name=".main.PrintTestActivity"
             android:exported="false" />
-        <!-- Add other permissions as needed based on your requirements -->
     </application>
 
 </manifest>

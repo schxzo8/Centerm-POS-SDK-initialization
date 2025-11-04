@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.TextView;
-
 import com.centermsdkdemo.R;
 import com.pos.sdk.DeviceManager;
 import com.pos.sdk.DevicesFactory;
@@ -25,7 +23,6 @@ public class SystemInfoActivity extends Activity {
 
         tvSystemInfo = findViewById(R.id.tv_system_info);
 
-        // Set click listener programmatically to avoid XML issues
         findViewById(R.id.btn_refresh).setOnClickListener(v -> {
             if (systemDevice != null) {
                 fetchSystemInfo();
@@ -34,7 +31,7 @@ public class SystemInfoActivity extends Activity {
             }
         });
 
-        // Set click listener for print test button (only if it exists in layout)
+        // Set click listener for print test button
         findViewById(R.id.btn_print_test).setOnClickListener(v -> {
             Intent intent = new Intent(SystemInfoActivity.this, PrintTestActivity.class);
             startActivity(intent);
