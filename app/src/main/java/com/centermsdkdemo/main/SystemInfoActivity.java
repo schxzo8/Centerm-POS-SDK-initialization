@@ -1,8 +1,10 @@
 package com.centermsdkdemo.main;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.centermsdkdemo.R;
@@ -30,6 +32,12 @@ public class SystemInfoActivity extends Activity {
             } else {
                 initializeSDK();
             }
+        });
+
+        // Set click listener for print test button (only if it exists in layout)
+        findViewById(R.id.btn_print_test).setOnClickListener(v -> {
+            Intent intent = new Intent(SystemInfoActivity.this, PrintTestActivity.class);
+            startActivity(intent);
         });
 
         initializeSDK();
